@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>teste 01</title>
+    <style>
+    </style>
+</head>
+<body onkeydown="adicionar(event)" onkeyup="remover(event)">
+    <img id="player" src="https://ripariu.great-site.net/favicon.ico"/>
+    <script>
+        var locx = 0
+        var locy = 0
+        var teclas=[]
+        function adicionar(event){
+            if(event.key==teclas[0]||event.key==teclas[1]||event.key==teclas[2]){}
+            else{
+            var adicionar = teclas.push(event.key)
+            console.log("adicionou")
+            }
+            mover()
+        }
+        function remover(event){
+            var remover = teclas.shift()
+            console.log("removeu")
+        }
+        function mover(){
+            if (teclas[0]=="ArrowDown"||teclas[1]=="ArrowDown"||teclas[2]=="ArrowDown"){
+                locy=locy+10
+                document.getElementById("player").style.marginTop=locy+"px"
+            }
+            if (teclas[0]=="ArrowUp"||teclas[1]=="ArrowUp"||teclas[2]=="ArrowUp"){
+                locy=locy-10
+                document.getElementById("player").style.marginTop=locy+"px"
+            }
+            if (teclas[0]=="ArrowRight"||teclas[1]=="ArrowRight"||teclas[2]=="ArrowRight"){
+                locx=locx+10
+                document.getElementById("player").style.marginLeft=locx+"px"
+            }
+            if (teclas[0]=="ArrowLeft"||teclas[1]=="ArrowLeft"||teclas[2]=="ArrowLeft"){
+                locx=locx-10
+                document.getElementById("player").style.marginLeft=locx+"px"
+            }
+            
+        }
+    </script> 
+</body>
+</html>

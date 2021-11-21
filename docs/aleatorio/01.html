@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>01</title>
+</head>
+<body>
+    <img id="lampada" src="https://i.stack.imgur.com/b983w.jpg" >
+    <input id="botao" type="button" value="ligar" onclick="ligar()"/>
+    <script>
+        var imagem1="https://i.stack.imgur.com/b983w.jpg"
+        var imagem2="https://i.stack.imgur.com/ybxlO.jpg"
+        var ligado=0
+        function ligar(){
+            if(ligado==0){
+            document.getElementById("lampada").src=imagem2
+            document.getElementById("botao").value="desligar"
+            ligado++
+            } 
+            else{
+                document.getElementById("lampada").src=imagem1
+                document.getElementById("botao").value="ligar"
+                ligado--
+            }
+        }
+    </script>
+</body>
+</html>

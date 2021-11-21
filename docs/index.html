@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bem-vindo</title>
+    <style>
+        #pri{
+            cursor:help;
+        }
+        #seg{
+            padding-left:12px;
+            cursor:help;
+        }
+        #diva{
+            animation-duration:3s;
+            animation-name:slidein;
+        }
+
+        .oi{
+            text-decoration:none;
+            animation-duration:3s;
+            animation-name:slideup;
+        }
+
+        a:hover{
+            color:purple;
+        }
+        body{
+            background-color:#cccccc;
+            font-family:arial;
+            overflow:hidden;
+            animation-duration:3s;
+            animation-name:trocarcor;
+        }
+        img{
+            animation-duration:3s;
+            animation-name:slidecima; 
+        }
+        @keyframes slideup{
+            from{
+                margin-left:500%;
+                width:100%;
+            }
+            to{
+                margin-left:0%;
+                width:100%;
+            } 
+        }
+        @keyframes slidein{
+            0.0%{
+                transform: translate(0px,2000px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
+        @keyframes slidecima{
+            0%{
+                margin-left:-100px;
+            }
+            100%{
+                margin-left:10000px;
+            }
+        }
+        @keyframes trocarcor{
+            0%{
+                background-color:#000033;
+            }
+            100%{
+                background-color:#cccccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <div id="diva">
+            <h1>Olá</h1>
+            <p>Este site acabou de ser aberto, então não tem nada pra fazer por enquanto.</p>
+        </div>
+        <a href="/a1" id="pri" class="oi">?</a><a href="/euestouvivo" id="seg" class="oi">?</a>
+    </div>
+    <div id="imagem">
+        <img src="/favicon.ico" height="500px" width="500px" style="margin-left:-10000000000px;">
+    </div>    
+    <script>
+    document.cookie = "Cookie=Toma um cookie; expires=Mon, 29 Oct 2055 12:00:00 UTC;"
+    </script>
+</body>
+</html>
